@@ -14,7 +14,7 @@ jobs:
       - name: Trigger Cypress tests in another repository
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: 'Cypress Tests' # Cypress Tests Repository Workflow Name
-          repository: 'enveryasar/cypress-github-actions'
+          workflow: 'cypress.yml' # Cypress Tests Repository Workflow File name
+          repo: 'enveryasar/cypress-github-actions'
           token: ${{ secrets.WORKFLOW_TRIGGER_PAT }}
           inputs: '{ "grep_tag": "regression" }' # Cypress Tests Input
